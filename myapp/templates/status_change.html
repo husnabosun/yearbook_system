@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="vstack gap-2 col-md-5">
+    <img src="https://miro.medium.com/v2/resize:fit:600/0*RSOoH-djDSwzlJKa.png" alt="">
+    <h3>You have {{status}} the note</h3>
+    <small class="text-body-secondary">You can update the status whenever you want.</small>
+    <a href="{% url 'receive_notes' %}" class="btn btn-light"> Turn back to notes </a>
+
+</div>
+{% endblock %}

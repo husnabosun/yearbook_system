@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="gap-2 col-md-5 mx-auto">
+    {% for note in notes %}
+    <div class="card">
+        <h6 class="card-header">To {{note.recipient}}</h6>
+        <div class="card-body">
+            <h6 class="card-title">{{note.timestamp}}</h6>
+            <p class="card-text">{{note.text}}.</p>
+            <a href="{% url 'update_note' note.id %}" class="btn btn-primary">Update</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if messages %}
+<div class="form-floating mb-3">
+    {% for message in messages %}
+    <div class="alert alert-info-{{ message.tags }}" role="alert"
+         style="z-index:1000 !important ; background-color:white !important ; margin-bottom:60px !important; --bs-alert-padding-x: 0.rem !important;">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                onclick="window.location.href='{% url 'send_note' %}';"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<form method="POST" action="{% url 'send_note' %}">
+    {% csrf_token %}
+
+    <div class="vstack gap-2 col-md-5">
+        <div class="sticky-xl-top">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <h1 class="display-3">Send Note</h1>
+                </blockquote>
+            </figure>
+        </div>
+        {{ form.recipient }}
+        <div class="form-floating mb-3">
+            {{ form.text }}
+            <label>Write your note here.</label>
+        </div>
+        <div class="d-grid gap-2 col-8 mx-auto">
+            <button class="btn btn-primary mt-4" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

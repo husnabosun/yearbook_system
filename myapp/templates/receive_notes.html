@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="gap-2 col-md-5 mx-auto">
+    {% for note in notes %}
+    <div class="card">
+        <h6 class="card-header">{{note.sender}}</h6>
+        <div class="card-body">
+            <h6 class="card-title">{{note.timestamp}}</h6>
+            <p class="card-text">{{note.text}}.</p>
+            <a href="{% url 'note_action' note.id 'approve' %}" class="btn btn-primary">Approve ✓</a>
+            <a href="{% url 'note_action' note.id 'disapprove' %}" class="btn btn-primary">Disapprove ×</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

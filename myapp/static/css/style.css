@@ -1,0 +1,51 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css');
+html,
+body.custom-background{
+    background: url("https://www.colorhexa.com/cff0ec.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+     text-align: center !important;
+     margin:0 !important;
+    }
+body {
+    min-height: 100vh !important;
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: #D1F0FD;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.navbar{
+background-color:white !important;
+z-index:1000 !important ;
+}
+.vstack{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.input-group-text{
+padding-top:50px;
+padding-bottom:11100px;
+}
+.form-control{
+padding-top:50px;
+padding-bottom:11100px;
+}
+.scrollspy-example {
+  height: 100px; /* İhtiyaca göre bu değeri ayarlayabilirsiniz */
+  overflow-y: auto;
+}
+
+.navbar{
+align-items:center;}
+.card {
+    text-align: left !important; /* Kart içindeki metni sola hizalar */
+}

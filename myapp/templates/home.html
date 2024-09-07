@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="vstack gap-2 col-md-5">
+    <div class="sticky-xl-top">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <h1 class="display-3">Yearbook System</h1>
+            </blockquote>
+        </figure>
+    </div>
+    <a href="{% url 'send_note' %}" class="btn btn-light"> Send Note</a>
+    <a href="{% url 'receive_notes' %}" class="btn btn-light"> View Notes Written For You</a>
+    <a href="{% url 'disapproved_notes' %}" class="btn btn-light">Disapproved Notes</a>
+    <a href="{% url 'user_notes' %}" class="btn btn-light">Your Notes</a>
+
+</div>
+{% endblock %}
+
+
+
+
